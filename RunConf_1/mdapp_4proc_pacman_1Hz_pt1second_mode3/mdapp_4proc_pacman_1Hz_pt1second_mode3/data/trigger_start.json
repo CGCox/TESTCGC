@@ -1,0 +1,44 @@
+{
+    "modules": [
+        {
+            "data": {
+                "disable_data_storage": false,
+                "run": 1,
+                "trigger_interval_ticks": 64000000
+            },
+            "match": "buf.*"
+        },
+        {
+            "data": {
+                "disable_data_storage": false,
+                "run": 1,
+                "trigger_interval_ticks": 64000000
+            },
+            "match": "mlt"
+        },
+        {
+            "data": {
+                "disable_data_storage": false,
+                "run": 1,
+                "trigger_interval_ticks": 64000000
+            },
+            "match": "ttcm"
+        },
+        {
+            "data": {
+                "disable_data_storage": false,
+                "run": 1,
+                "trigger_interval_ticks": 64000000
+            },
+            "match": "ntoq_hsievent"
+        },
+        {
+            "data": {
+                "disable_data_storage": false,
+                "run": 1,
+                "trigger_interval_ticks": 64000000
+            },
+            "match": "ntoq_token"
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+{
+    "build_info": {},
+    "command_line": "/cvmfs/dunedaq-development.opensciencegrid.org/nightly/N21-12-02/packages/minidaqapp/2eb159b/slf7.x86_64.e19.prof/minidaqapp/lib64/python/minidaqapp/nanorc/mdapp_multiru_gen.py --host-ru localhost -o . --number-of-data-producers 1 --frontend-type pacman --trigger-window-before-ticks 2500000 --trigger-window-after-ticks 2500000 --trigger-rate-hz 1.0 --enable-raw-recording mdapp_4proc_pacman_1Hz_pt1second_mode3",
+    "mdapp_dir": "/cvmfs/dunedaq-development.opensciencegrid.org/nightly/N21-12-02/packages/minidaqapp/2eb159b/slf7.x86_64.e19.prof/minidaqapp/lib64/python/minidaqapp/nanorc"
+}

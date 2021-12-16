@@ -1,0 +1,117 @@
+{
+    "modules": [
+        {
+            "data": {
+                "qinfos": [
+                    {
+                        "dir": "output",
+                        "inst": "trigger_decision_q",
+                        "name": "output"
+                    }
+                ]
+            },
+            "inst": "trigdec_receiver",
+            "plugin": "TriggerDecisionReceiver"
+        },
+        {
+            "data": {
+                "qinfos": [
+                    {
+                        "dir": "output",
+                        "inst": "data_fragments_q",
+                        "name": "output"
+                    }
+                ]
+            },
+            "inst": "fragment_receiver",
+            "plugin": "FragmentReceiver"
+        },
+        {
+            "data": {
+                "qinfos": [
+                    {
+                        "dir": "input",
+                        "inst": "trigger_decision_q",
+                        "name": "trigger_decision_input_queue"
+                    },
+                    {
+                        "dir": "output",
+                        "inst": "trigger_record_q",
+                        "name": "trigger_record_output_queue"
+                    },
+                    {
+                        "dir": "input",
+                        "inst": "data_fragments_q",
+                        "name": "data_fragment_input_queue"
+                    }
+                ]
+            },
+            "inst": "trb",
+            "plugin": "TriggerRecordBuilder"
+        },
+        {
+            "data": {
+                "qinfos": [
+                    {
+                        "dir": "input",
+                        "inst": "trigger_record_q",
+                        "name": "trigger_record_input_queue"
+                    }
+                ]
+            },
+            "inst": "datawriter",
+            "plugin": "DataWriter"
+        }
+    ],
+    "nwconnections": [
+        {
+            "address": "tcp://{host_trigger}:12344",
+            "name": "${USER}_test.hsievent",
+            "topics": []
+        },
+        {
+            "address": "tcp://{host_df}:12345",
+            "name": "${USER}_test.trigdec",
+            "topics": []
+        },
+        {
+            "address": "tcp://{host_trigger}:12346",
+            "name": "${USER}_test.triginh",
+            "topics": []
+        },
+        {
+            "address": "tcp://{host_df}:12347",
+            "name": "${USER}_test.frags_0",
+            "topics": []
+        },
+        {
+            "address": "tcp://{host_ru0}:12348",
+            "name": "${USER}_test.datareq_0",
+            "topics": []
+        },
+        {
+            "address": "tcp://{host_ru0}:12349",
+            "name": "${USER}_test.timesync_0",
+            "topics": [
+                "Timesync"
+            ]
+        }
+    ],
+    "queues": [
+        {
+            "capacity": 1000,
+            "inst": "data_fragments_q",
+            "kind": "FollyMPMCQueue"
+        },
+        {
+            "capacity": 100,
+            "inst": "trigger_decision_q",
+            "kind": "FollySPSCQueue"
+        },
+        {
+            "capacity": 100,
+            "inst": "trigger_record_q",
+            "kind": "FollySPSCQueue"
+        }
+    ]
+}

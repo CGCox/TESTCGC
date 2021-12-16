@@ -1,0 +1,71 @@
+{
+    "modules": [
+        {
+            "data": {
+                "qinfos": [
+                    {
+                        "dir": "output",
+                        "inst": "hsievent_q_to_net",
+                        "name": "hsievent_sink"
+                    }
+                ]
+            },
+            "inst": "fhsig",
+            "plugin": "FakeHSIEventGenerator"
+        },
+        {
+            "data": {
+                "qinfos": [
+                    {
+                        "dir": "input",
+                        "inst": "hsievent_q_to_net",
+                        "name": "input"
+                    }
+                ]
+            },
+            "inst": "qton_hsievent",
+            "plugin": "QueueToNetwork"
+        }
+    ],
+    "nwconnections": [
+        {
+            "address": "tcp://{host_trigger}:12344",
+            "name": "${USER}_test.hsievent",
+            "topics": []
+        },
+        {
+            "address": "tcp://{host_df}:12345",
+            "name": "${USER}_test.trigdec",
+            "topics": []
+        },
+        {
+            "address": "tcp://{host_trigger}:12346",
+            "name": "${USER}_test.triginh",
+            "topics": []
+        },
+        {
+            "address": "tcp://{host_df}:12347",
+            "name": "${USER}_test.frags_0",
+            "topics": []
+        },
+        {
+            "address": "tcp://{host_ru0}:12348",
+            "name": "${USER}_test.datareq_0",
+            "topics": []
+        },
+        {
+            "address": "tcp://{host_ru0}:12349",
+            "name": "${USER}_test.timesync_0",
+            "topics": [
+                "Timesync"
+            ]
+        }
+    ],
+    "queues": [
+        {
+            "capacity": 100,
+            "inst": "hsievent_q_to_net",
+            "kind": "FollySPSCQueue"
+        }
+    ]
+}

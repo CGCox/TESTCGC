@@ -1,0 +1,19 @@
+{
+    "modules": [
+        {
+            "match": "ntoq_token"
+        },
+        {
+            "match": "ntoq_hsievent"
+        },
+        {
+            "match": "ttcm"
+        },
+        {
+            "match": "mlt"
+        },
+        {
+            "match": "buf.*"
+        }
+    ]
+}

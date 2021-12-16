@@ -1,0 +1,15 @@
+{
+    "apps": {
+        "dataflow": "data/dataflow_start",
+        "hsi": "data/hsi_start",
+        "ruemu0": "data/ruemu0_start",
+        "trigger": "data/trigger_start"
+    },
+    "order": [
+        "dataflow",
+        "trigger",
+        "ruemu0",
+        "hsi",
+        "dqm0"
+    ]
+}

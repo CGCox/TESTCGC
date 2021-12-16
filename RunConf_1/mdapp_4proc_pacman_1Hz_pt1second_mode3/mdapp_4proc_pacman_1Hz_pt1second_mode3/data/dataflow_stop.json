@@ -1,0 +1,22 @@
+{
+    "modules": [
+        {
+            "match": "trigdec_receiver"
+        },
+        {
+            "match": "trb"
+        },
+        {
+            "match": "fragment_receiver"
+        },
+        {
+            "match": "tp_fragment_receiver"
+        },
+        {
+            "match": "ds_tpset_fragment_receiver"
+        },
+        {
+            "match": "datawriter"
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "modules": [
+        {
+            "data": {
+                "disable_data_storage": false,
+                "run": 333,
+                "trigger_interval_ticks": 64000000
+            },
+            "match": "datawriter"
+        },
+        {
+            "data": {
+                "disable_data_storage": false,
+                "run": 333,
+                "trigger_interval_ticks": 64000000
+            },
+            "match": "fragment_receiver"
+        },
+        {
+            "data": {
+                "disable_data_storage": false,
+                "run": 333,
+                "trigger_interval_ticks": 64000000
+            },
+            "match": "tp_fragment_receiver"
+        },
+        {
+            "data": {
+                "disable_data_storage": false,
+                "run": 333,
+                "trigger_interval_ticks": 64000000
+            },
+            "match": "ds_tpset_fragment_receiver"
+        },
+        {
+            "data": {
+                "disable_data_storage": false,
+                "run": 333,
+                "trigger_interval_ticks": 64000000
+            },
+            "match": "trb"
+        },
+        {
+            "data": {
+                "disable_data_storage": false,
+                "run": 333,
+                "trigger_interval_ticks": 64000000
+            },
+            "match": "trigdec_receiver"
+        }
+    ]
+}

@@ -1,0 +1,66 @@
+[33mStart of unit test suite "/home/ccox/N2Dec21TEST/build/./lbrulibs/unittest/PacmanFrame_test"[0m
+Running 1 test case...
+[1;34;49mEntering test module "PacmanFrame_test"
+[0;39;49m[1;34;49m/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/PacmanFrame_test.cxx(17): Entering test suite "PacmanFrame_test"
+[0;39;49m[1;34;49m/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/PacmanFrame_test.cxx(19): Entering test case "PacmanHeader_Methods"
+[0;39;49m/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/PacmanFrame_test.cxx(26): [1;32;49minfo: check header.unix_ts == 0x0 has passed[0;39;49m
+/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/PacmanFrame_test.cxx(27): [1;32;49minfo: check header.words == 0x1 has passed[0;39;49m
+/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/PacmanFrame_test.cxx(42): [1;32;49minfo: check frame->get_msg_header((void *)&message)->unix_ts == 1631536304 has passed[0;39;49m
+/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/PacmanFrame_test.cxx(43): [1;32;49minfo: check frame->get_msg_header((void *)&message)->words == 1 has passed[0;39;49m
+/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/PacmanFrame_test.cxx(47): [1;32;49minfo: check theWord->data_word.type == 0x44 has passed[0;39;49m
+/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/PacmanFrame_test.cxx(48): [1;32;49minfo: check theWord->data_word.channel_id == 0x1 has passed[0;39;49m
+/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/PacmanFrame_test.cxx(49): [1;32;49minfo: check theWord->data_word.receipt_timestamp == 35987408 has passed[0;39;49m
+[1;34;49m/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/PacmanFrame_test.cxx(19): Leaving test case "PacmanHeader_Methods"; testing time: 812us
+[0;39;49m[1;34;49m/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/PacmanFrame_test.cxx(17): Leaving test suite "PacmanFrame_test"; testing time: 866us
+[0;39;49m[1;34;49mLeaving test module "PacmanFrame_test"; testing time: 911us
+[0;39;49m
+[1;32;49m*** No errors detected
+[0;39;49m[33mEnd of unit test suite "/home/ccox/N2Dec21TEST/build/./lbrulibs/unittest/PacmanFrame_test"[0m
+[33mStart of unit test suite "/home/ccox/N2Dec21TEST/build/./lbrulibs/unittest/ZMQLink_test"[0m
+Running 1 test case...
+[1;34;49mEntering test module "ZMQLink_test"
+[0;39;49m[1;34;49m/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/ZMQLink_test.cxx(27): Entering test suite "ZMQLink_test"
+[0;39;49m[1;34;49m/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/ZMQLink_test.cxx(29): Entering test case "LinkTest"
+[0;39;49m/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/ZMQLink_test.cxx(39): [1;32;49minfo: check m_publisher_connected has passed[0;39;49m
+2021-Dec-16 14:05:41,340 INFO [dunedaq::lbrulibs::createZMQLinkModel(...) at /scratch/dev/sourcecode/lbrulibs/src/CreateZMQLink.hpp:27]  ND Readout: CreateZMQLinkModel Creating Link for Pacman!
+2021-Dec-16 14:05:41,389 LOG [dunedaq::lbrulibs::PacmanCardReader::do_configure(...) at /scratch/dev/sourcecode/lbrulibs/plugins/PacmanCardReader.cpp:100] Configuring ZMQLinkHandler
+/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/ZMQLink_test.cxx(89): [1;31;49merror: in "ZMQLink_test/LinkTest": Unable to Read JSON: [json.exception.out_of_range.403] key 'dunedaq.lbrulibs.pacmancardreaderinfo.ZMQLinkInfo' not found[0;39;49m
+[1;34;49m/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/ZMQLink_test.cxx(29): Leaving test case "LinkTest"; testing time: 136447us
+[0;39;49m[1;34;49m/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/ZMQLink_test.cxx(27): Leaving test suite "ZMQLink_test"; testing time: 136494us
+[0;39;49m[1;34;49mLeaving test module "ZMQLink_test"; testing time: 136545us
+[0;39;49m
+[1;31;49m*** 1 failure is detected in the test module "ZMQLink_test"
+[0;39;49m[33mEnd of unit test suite "/home/ccox/N2Dec21TEST/build/./lbrulibs/unittest/ZMQLink_test"[0m
+[33mStart of unit test suite "/home/ccox/N2Dec21TEST/build/./lbrulibs/unittest/ZMQPubSub_test"[0m
+Running 1 test case...
+[1;34;49mEntering test module "ZMQPubSub_test"
+[0;39;49m[1;34;49m/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/ZMQPubSub_test.cxx(18): Entering test suite "ZMQPubSub_test"
+[0;39;49m[1;34;49m/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/ZMQPubSub_test.cxx(20): Entering test case "SendReceiveTest"
+[0;39;49m/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/ZMQPubSub_test.cxx(36): [1;32;49minfo: check m_publisher_connected has passed[0;39;49m
+/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/ZMQPubSub_test.cxx(37): [1;32;49minfo: check m_subscriber_connected has passed[0;39;49m
+/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/ZMQPubSub_test.cxx(51): [1;32;49minfo: check recvd != 0 has passed[0;39;49m
+/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/ZMQPubSub_test.cxx(52): [1;32;49minfo: check msg.size() == 4 has passed[0;39;49m
+/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/ZMQPubSub_test.cxx(54): [1;32;49minfo: check received == "TEST" has passed[0;39;49m
+[1;34;49m/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/ZMQPubSub_test.cxx(20): Leaving test case "SendReceiveTest"; testing time: 16241us
+[0;39;49m[1;34;49m/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/ZMQPubSub_test.cxx(18): Leaving test suite "ZMQPubSub_test"; testing time: 16332us
+[0;39;49m[1;34;49mLeaving test module "ZMQPubSub_test"; testing time: 16454us
+[0;39;49m
+[1;32;49m*** No errors detected
+[0;39;49m[33mEnd of unit test suite "/home/ccox/N2Dec21TEST/build/./lbrulibs/unittest/ZMQPubSub_test"[0m
+[33mStart of unit test suite "/home/ccox/N2Dec21TEST/build/./lbrulibs/unittest/ZMQStream_test"[0m
+Running 1 test case...
+[1;34;49mEntering test module "ZMQStream_test"
+[0;39;49m[1;34;49m/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/ZMQStream_test.cxx(18): Entering test suite "ZMQStream_test"
+[0;39;49m[1;34;49m/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/ZMQStream_test.cxx(20): Entering test case "SendReceiveTest"
+[0;39;49m/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/ZMQStream_test.cxx(35): [1;32;49minfo: check m_sender_connected has passed[0;39;49m
+/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/ZMQStream_test.cxx(36): [1;32;49minfo: check m_receiver_connected has passed[0;39;49m
+/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/ZMQStream_test.cxx(46): [1;32;49minfo: check identity_recvd != 0 has passed[0;39;49m
+/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/ZMQStream_test.cxx(54): [1;32;49minfo: check repID != 0 has passed[0;39;49m
+/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/ZMQStream_test.cxx(78): [1;32;49minfo: check msg.size() == 4 has passed[0;39;49m
+/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/ZMQStream_test.cxx(80): [1;32;49minfo: check received == "TEST" has passed[0;39;49m
+[1;34;49m/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/ZMQStream_test.cxx(20): Leaving test case "SendReceiveTest"; testing time: 145288us
+[0;39;49m[1;34;49m/home/ccox/N2Dec21TEST/sourcecode/lbrulibs/unittest/ZMQStream_test.cxx(18): Leaving test suite "ZMQStream_test"; testing time: 145329us
+[0;39;49m[1;34;49mLeaving test module "ZMQStream_test"; testing time: 145361us
+[0;39;49m
+[1;32;49m*** No errors detected
+[0;39;49m[33mEnd of unit test suite "/home/ccox/N2Dec21TEST/build/./lbrulibs/unittest/ZMQStream_test"[0m

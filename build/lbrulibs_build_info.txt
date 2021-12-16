@@ -1,0 +1,10 @@
+user for build:         ccox
+hostname for build:     linappserv3.pp.rhul.ac.uk
+build time:             Thu 16 Dec 14:27:40 GMT 2021
+local repo dir:         /zfs_home/ccox/N2Dec21TEST/sourcecode/lbrulibs
+git branch:             develop
+git commit hash:        06111c963c614319eed2c687922680f73349d92b
+git commit time:        Fri Dec 10 13:07:34 2021 +0000
+git commit description: Update README.md
+git commit author:      willpvazquez
+uncommitted changes:    schema/lbrulibs/pacmancardreaderinfo.jsonnet src/ZMQLinkModel.hpp 

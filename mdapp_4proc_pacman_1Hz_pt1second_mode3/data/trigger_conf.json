@@ -1,0 +1,50 @@
+{
+    "modules": [
+        {
+            "data": {
+                "msg_module_name": "HSIEventNQ",
+                "msg_type": "dunedaq::dfmessages::HSIEvent",
+                "receiver_config": {
+                    "name": "${USER}_test.hsievent",
+                    "subscriptions": []
+                }
+            },
+            "match": "ntoq_hsievent"
+        },
+        {
+            "data": {
+                "s0": {
+                    "signal_type": 0,
+                    "time_after": 20000,
+                    "time_before": 10000
+                },
+                "s1": {
+                    "signal_type": 1,
+                    "time_after": 2500000,
+                    "time_before": 2500000
+                },
+                "s2": {
+                    "signal_type": 2,
+                    "time_after": 2500000,
+                    "time_before": 2500000
+                }
+            },
+            "match": "ttcm"
+        },
+        {
+            "data": {
+                "initial_token_count": 10,
+                "links": [
+                    {
+                        "element": 0,
+                        "region": 0,
+                        "system": "NDLArTPC"
+                    }
+                ],
+                "td_connection_name": "${USER}_test.trigdec",
+                "token_connection_name": "${USER}_test.triginh"
+            },
+            "match": "mlt"
+        }
+    ]
+}

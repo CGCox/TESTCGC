@@ -1,0 +1,218 @@
+{
+  "dataflow": {
+    "modules": [
+      {
+        "data": {
+          "disable_data_storage": false,
+          "run": 1,
+          "trigger_interval_ticks": 64000000
+        },
+        "match": "datawriter"
+      },
+      {
+        "data": {
+          "disable_data_storage": false,
+          "run": 1,
+          "trigger_interval_ticks": 64000000
+        },
+        "match": "fragment_receiver"
+      },
+      {
+        "data": {
+          "disable_data_storage": false,
+          "run": 1,
+          "trigger_interval_ticks": 64000000
+        },
+        "match": "tp_fragment_receiver"
+      },
+      {
+        "data": {
+          "disable_data_storage": false,
+          "run": 1,
+          "trigger_interval_ticks": 64000000
+        },
+        "match": "ds_tpset_fragment_receiver"
+      },
+      {
+        "data": {
+          "disable_data_storage": false,
+          "run": 1,
+          "trigger_interval_ticks": 64000000
+        },
+        "match": "trb"
+      },
+      {
+        "data": {
+          "disable_data_storage": false,
+          "run": 1,
+          "trigger_interval_ticks": 64000000
+        },
+        "match": "trigdec_receiver"
+      }
+    ]
+  },
+  "hsi": {
+    "modules": [
+      {
+        "data": {
+          "disable_data_storage": false,
+          "run": 1,
+          "trigger_interval_ticks": 50000000
+        },
+        "match": "fhsig"
+      },
+      {
+        "data": {
+          "disable_data_storage": false,
+          "run": 1,
+          "trigger_interval_ticks": 50000000
+        },
+        "match": "qton_hsievent"
+      }
+    ]
+  },
+  "ruemu0": {
+    "modules": [
+      {
+        "data": {
+          "disable_data_storage": false,
+          "run": 1,
+          "trigger_interval_ticks": 64000000
+        },
+        "match": "datahandler_.*"
+      },
+      {
+        "data": {
+          "disable_data_storage": false,
+          "run": 1,
+          "trigger_interval_ticks": 64000000
+        },
+        "match": "fake_source"
+      },
+      {
+        "data": {
+          "disable_data_storage": false,
+          "run": 1,
+          "trigger_interval_ticks": 64000000
+        },
+        "match": "pacman_source"
+      },
+      {
+        "data": {
+          "disable_data_storage": false,
+          "run": 1,
+          "trigger_interval_ticks": 64000000
+        },
+        "match": "flxcard.*"
+      },
+      {
+        "data": {
+          "disable_data_storage": false,
+          "run": 1,
+          "trigger_interval_ticks": 64000000
+        },
+        "match": "request_receiver"
+      },
+      {
+        "data": {
+          "disable_data_storage": false,
+          "run": 1,
+          "trigger_interval_ticks": 64000000
+        },
+        "match": "ssp.*"
+      },
+      {
+        "data": {
+          "disable_data_storage": false,
+          "run": 1,
+          "trigger_interval_ticks": 64000000
+        },
+        "match": "ntoq_trigdec"
+      },
+      {
+        "data": {
+          "disable_data_storage": false,
+          "run": 1,
+          "trigger_interval_ticks": 64000000
+        },
+        "match": "tp_datahandler_.*"
+      },
+      {
+        "data": {
+          "disable_data_storage": false,
+          "run": 1,
+          "trigger_interval_ticks": 64000000
+        },
+        "match": "tpset_publisher"
+      },
+      {
+        "data": {
+          "disable_data_storage": false,
+          "run": 1,
+          "trigger_interval_ticks": 64000000
+        },
+        "match": "fakedataprod_.*"
+      },
+      {
+        "data": {
+          "disable_data_storage": false,
+          "run": 1,
+          "trigger_interval_ticks": 64000000
+        },
+        "match": "fragment_sender"
+      },
+      {
+        "data": {
+          "disable_data_storage": false,
+          "run": 1,
+          "trigger_interval_ticks": 64000000
+        },
+        "match": "errored_frame_consumer"
+      }
+    ]
+  },
+  "trigger": {
+    "modules": [
+      {
+        "data": {
+          "disable_data_storage": false,
+          "run": 1,
+          "trigger_interval_ticks": 64000000
+        },
+        "match": "buf.*"
+      },
+      {
+        "data": {
+          "disable_data_storage": false,
+          "run": 1,
+          "trigger_interval_ticks": 64000000
+        },
+        "match": "mlt"
+      },
+      {
+        "data": {
+          "disable_data_storage": false,
+          "run": 1,
+          "trigger_interval_ticks": 64000000
+        },
+        "match": "ttcm"
+      },
+      {
+        "data": {
+          "disable_data_storage": false,
+          "run": 1,
+          "trigger_interval_ticks": 64000000
+        },
+        "match": "ntoq_hsievent"
+      },
+      {
+        "data": {
+          "disable_data_storage": false,
+          "run": 1,
+          "trigger_interval_ticks": 64000000
+        },
+        "match": "ntoq_token"
+      }
+    ]
+  }
+}

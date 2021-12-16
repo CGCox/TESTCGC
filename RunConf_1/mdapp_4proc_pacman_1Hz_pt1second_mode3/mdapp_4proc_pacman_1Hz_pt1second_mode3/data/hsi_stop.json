@@ -1,0 +1,10 @@
+{
+    "modules": [
+        {
+            "match": "fhsig"
+        },
+        {
+            "match": "qton_hsievent"
+        }
+    ]
+}

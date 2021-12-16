@@ -1,0 +1,94 @@
+{
+    "modules": [
+        {
+            "data": {
+                "qinfos": [
+                    {
+                        "dir": "output",
+                        "inst": "hsievent_from_netq",
+                        "name": "output"
+                    }
+                ]
+            },
+            "inst": "ntoq_hsievent",
+            "plugin": "NetworkToQueue"
+        },
+        {
+            "data": {
+                "qinfos": [
+                    {
+                        "dir": "input",
+                        "inst": "hsievent_from_netq",
+                        "name": "input"
+                    },
+                    {
+                        "dir": "output",
+                        "inst": "trigger_candidate_q",
+                        "name": "output"
+                    }
+                ]
+            },
+            "inst": "ttcm",
+            "plugin": "TimingTriggerCandidateMaker"
+        },
+        {
+            "data": {
+                "qinfos": [
+                    {
+                        "dir": "input",
+                        "inst": "trigger_candidate_q",
+                        "name": "trigger_candidate_source"
+                    }
+                ]
+            },
+            "inst": "mlt",
+            "plugin": "ModuleLevelTrigger"
+        }
+    ],
+    "nwconnections": [
+        {
+            "address": "tcp://{host_trigger}:12344",
+            "name": "${USER}_test.hsievent",
+            "topics": []
+        },
+        {
+            "address": "tcp://{host_df}:12345",
+            "name": "${USER}_test.trigdec",
+            "topics": []
+        },
+        {
+            "address": "tcp://{host_trigger}:12346",
+            "name": "${USER}_test.triginh",
+            "topics": []
+        },
+        {
+            "address": "tcp://{host_df}:12347",
+            "name": "${USER}_test.frags_0",
+            "topics": []
+        },
+        {
+            "address": "tcp://{host_ru0}:12348",
+            "name": "${USER}_test.datareq_0",
+            "topics": []
+        },
+        {
+            "address": "tcp://{host_ru0}:12349",
+            "name": "${USER}_test.timesync_0",
+            "topics": [
+                "Timesync"
+            ]
+        }
+    ],
+    "queues": [
+        {
+            "capacity": 1000,
+            "inst": "hsievent_from_netq",
+            "kind": "FollyMPMCQueue"
+        },
+        {
+            "capacity": 1000,
+            "inst": "trigger_candidate_q",
+            "kind": "FollyMPMCQueue"
+        }
+    ]
+}

@@ -1,0 +1,117 @@
+{
+    "modules": [
+        {
+            "data": {
+                "qinfos": [
+                    {
+                        "dir": "input",
+                        "inst": "fragment_q",
+                        "name": "input_queue"
+                    }
+                ]
+            },
+            "inst": "fragment_sender",
+            "plugin": "FragmentSender"
+        },
+        {
+            "data": {
+                "qinfos": [
+                    {
+                        "dir": "output",
+                        "inst": "data_requests_0",
+                        "name": "output"
+                    }
+                ]
+            },
+            "inst": "request_receiver",
+            "plugin": "RequestReceiver"
+        },
+        {
+            "data": {
+                "qinfos": [
+                    {
+                        "dir": "input",
+                        "inst": "pacman_link_0",
+                        "name": "raw_input"
+                    },
+                    {
+                        "dir": "input",
+                        "inst": "data_requests_0",
+                        "name": "data_requests_0"
+                    },
+                    {
+                        "dir": "output",
+                        "inst": "fragment_q",
+                        "name": "fragment_queue"
+                    }
+                ]
+            },
+            "inst": "datahandler_0",
+            "plugin": "DataLinkHandler"
+        },
+        {
+            "data": {
+                "qinfos": [
+                    {
+                        "dir": "output",
+                        "inst": "pacman_link_0",
+                        "name": "output_0"
+                    }
+                ]
+            },
+            "inst": "pacman_source",
+            "plugin": "PacmanCardReader"
+        }
+    ],
+    "nwconnections": [
+        {
+            "address": "tcp://{host_trigger}:12344",
+            "name": "${USER}_test.hsievent",
+            "topics": []
+        },
+        {
+            "address": "tcp://{host_df}:12345",
+            "name": "${USER}_test.trigdec",
+            "topics": []
+        },
+        {
+            "address": "tcp://{host_trigger}:12346",
+            "name": "${USER}_test.triginh",
+            "topics": []
+        },
+        {
+            "address": "tcp://{host_df}:12347",
+            "name": "${USER}_test.frags_0",
+            "topics": []
+        },
+        {
+            "address": "tcp://{host_ru0}:12348",
+            "name": "${USER}_test.datareq_0",
+            "topics": []
+        },
+        {
+            "address": "tcp://{host_ru0}:12349",
+            "name": "${USER}_test.timesync_0",
+            "topics": [
+                "Timesync"
+            ]
+        }
+    ],
+    "queues": [
+        {
+            "capacity": 100,
+            "inst": "data_requests_0",
+            "kind": "FollySPSCQueue"
+        },
+        {
+            "capacity": 100,
+            "inst": "fragment_q",
+            "kind": "FollyMPMCQueue"
+        },
+        {
+            "capacity": 100000,
+            "inst": "pacman_link_0",
+            "kind": "FollySPSCQueue"
+        }
+    ]
+}

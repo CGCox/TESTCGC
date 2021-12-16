@@ -1,0 +1,8 @@
+{
+    "apps": {
+        "dataflow": "data/dataflow_init",
+        "hsi": "data/hsi_init",
+        "ruemu0": "data/ruemu0_init",
+        "trigger": "data/trigger_init"
+    }
+}

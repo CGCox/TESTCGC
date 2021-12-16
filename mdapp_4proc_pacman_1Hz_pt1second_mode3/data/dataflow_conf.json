@@ -1,0 +1,138 @@
+{
+    "modules": [
+        {
+            "data": {
+                "connection_name": "${USER}_test.trigdec",
+                "general_queue_timeout": 100
+            },
+            "match": "trigdec_receiver"
+        },
+        {
+            "data": {
+                "general_queue_timeout": 100,
+                "map": [
+                    {
+                        "connection_name": "${USER}_test.datareq_0",
+                        "element": 0,
+                        "region": 0,
+                        "system": "NDLArTPC"
+                    }
+                ],
+                "max_time_window": 0,
+                "reply_connection_name": "${USER}_test.frags_0",
+                "trigger_record_timeout_ms": 0
+            },
+            "match": "trb"
+        },
+        {
+            "data": {
+                "data_storage_prescale": 1,
+                "data_store_parameters": {
+                    "directory_path": ".",
+                    "disable_unique_filename_suffix": false,
+                    "file_layout_parameters": {
+                        "digits_for_sequence_number": 4,
+                        "digits_for_trigger_number": 5,
+                        "path_param_list": [
+                            {
+                                "detector_group_name": "TPC",
+                                "detector_group_type": "TPC",
+                                "digits_for_element_number": 2,
+                                "digits_for_region_number": 3,
+                                "element_name_prefix": "Link",
+                                "region_name_prefix": "APA"
+                            },
+                            {
+                                "detector_group_name": "PDS",
+                                "detector_group_type": "PDS",
+                                "digits_for_element_number": 2,
+                                "digits_for_region_number": 3,
+                                "element_name_prefix": "Element",
+                                "region_name_prefix": "Region"
+                            },
+                            {
+                                "detector_group_name": "NDLArTPC",
+                                "detector_group_type": "NDLArTPC",
+                                "digits_for_element_number": 2,
+                                "digits_for_region_number": 3,
+                                "element_name_prefix": "Element",
+                                "region_name_prefix": "Region"
+                            },
+                            {
+                                "detector_group_name": "Trigger",
+                                "detector_group_type": "Trigger",
+                                "digits_for_element_number": 2,
+                                "digits_for_region_number": 3,
+                                "element_name_prefix": "Element",
+                                "region_name_prefix": "Region"
+                            },
+                            {
+                                "detector_group_name": "TPC",
+                                "detector_group_type": "TPC_TP",
+                                "digits_for_element_number": 2,
+                                "digits_for_region_number": 3,
+                                "element_name_prefix": "Link",
+                                "region_name_prefix": "TP_APA"
+                            }
+                        ],
+                        "trigger_record_name_prefix": "TriggerRecord"
+                    },
+                    "filename_parameters": {
+                        "digits_for_file_index": 4,
+                        "digits_for_run_number": 6,
+                        "file_index_prefix": "",
+                        "overall_prefix": "swtest",
+                        "run_number_prefix": "run"
+                    },
+                    "free_space_safety_factor_for_write": 5.0,
+                    "max_file_size_bytes": 4294967296,
+                    "mode": "all-per-file",
+                    "name": "data_store",
+                    "operational_environment": "swtest",
+                    "type": "HDF5DataStore",
+                    "version": 3
+                },
+                "initial_token_count": 0,
+                "max_write_retry_time_usec": 1000000,
+                "min_write_retry_time_usec": 1000,
+                "token_connection": "${USER}_test.triginh",
+                "write_retry_time_increase_factor": 2
+            },
+            "match": "datawriter"
+        },
+        {
+            "data": {
+                "connection_name": "${USER}_test.frags_0",
+                "general_queue_timeout": 100
+            },
+            "match": "fragment_receiver"
+        },
+        {
+            "data": {
+                "connection_name": "${USER}_test.tp_frags_0",
+                "general_queue_timeout": 100
+            },
+            "match": "tp_fragment_receiver"
+        },
+        {
+            "data": {
+                "connection_name": "${USER}_test.frags_tpset_ds_0",
+                "general_queue_timeout": 100
+            },
+            "match": "ds_tpset_fragment_receiver"
+        },
+        {
+            "data": {
+                "msg_module_name": "TPSetNQ",
+                "msg_type": "dunedaq::trigger::TPSet",
+                "receiver_config": {
+                    "name": "${USER}_test.tpsets_0",
+                    "subscriptions": [
+                        "TPSets"
+                    ]
+                }
+            },
+            "match": "tpset_subscriber_0"
+        }
+    ]
+}

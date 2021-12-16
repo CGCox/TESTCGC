@@ -1,0 +1,10 @@
+{
+    "apps": {
+        "hsi": "data/hsi_pause",
+        "trigger": "data/trigger_pause"
+    },
+    "order": [
+        "trigger",
+        "hsi"
+    ]
+}

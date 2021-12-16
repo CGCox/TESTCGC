@@ -1,0 +1,37 @@
+{
+    "modules": [
+        {
+            "match": "request_receiver"
+        },
+        {
+            "match": "flxcard.*"
+        },
+        {
+            "match": "ssp.*"
+        },
+        {
+            "match": "fake_source"
+        },
+        {
+            "match": "pacman_source"
+        },
+        {
+            "match": "datahandler_.*"
+        },
+        {
+            "match": "tp_datahandler_.*"
+        },
+        {
+            "match": "tpset_publisher"
+        },
+        {
+            "match": "fakedataprod_.*"
+        },
+        {
+            "match": "fragment_sender"
+        },
+        {
+            "match": "errored_frame_consumer"
+        }
+    ]
+}

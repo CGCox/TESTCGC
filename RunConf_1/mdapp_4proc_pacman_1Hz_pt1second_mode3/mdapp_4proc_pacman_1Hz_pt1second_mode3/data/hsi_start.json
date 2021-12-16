@@ -1,0 +1,20 @@
+{
+    "modules": [
+        {
+            "data": {
+                "disable_data_storage": false,
+                "run": 333,
+                "trigger_interval_ticks": 50000000
+            },
+            "match": "fhsig"
+        },
+        {
+            "data": {
+                "disable_data_storage": false,
+                "run": 333,
+                "trigger_interval_ticks": 50000000
+            },
+            "match": "qton_hsievent"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "modules": [
+        {
+            "match": "fragment_receiver"
+        },
+        {
+            "match": "trigdec_receiver"
+        },
+        {
+            "match": "tp_fragment_receiver"
+        },
+        {
+            "match": "ds_tpset_fragment_receiver"
+        },
+        {
+            "match": "qton_token"
+        }
+    ]
+}
